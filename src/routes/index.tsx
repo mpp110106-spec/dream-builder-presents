@@ -7,6 +7,7 @@ import { Slide3Calendar } from "@/components/slides/Slide3Calendar";
 import { Slide4Financing } from "@/components/slides/Slide4Financing";
 import { Slide5Steps } from "@/components/slides/Slide5Steps";
 import { Slide6CTA } from "@/components/slides/Slide6CTA";
+import logoFull from "@/assets/ciaf-logo-full.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,11 +63,9 @@ function Deck() {
     <main className="min-h-screen bg-[color:var(--ciaf-paper)] flex flex-col">
       <header className="px-6 md:px-10 py-5 flex items-center justify-between border-b border-[color:var(--ciaf-navy)]/10">
         <div className="flex items-center gap-3">
-          <div className="font-extrabold text-[color:var(--ciaf-navy)] text-xl tracking-tight">
-            CIAF
-          </div>
+          <img src={logoFull} alt="CIAF" className="h-9 w-auto" />
           <div className="h-5 w-px bg-[color:var(--ciaf-navy)]/30" />
-          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--ciaf-navy)]/70">
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--ciaf-navy)]/70">
             Renovación 2026-2
           </div>
         </div>

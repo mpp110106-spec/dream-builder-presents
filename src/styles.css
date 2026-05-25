@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -66,8 +66,8 @@
   --color-ciaf-green-soft: var(--ciaf-green-soft);
   --color-ciaf-ink: var(--ciaf-ink);
   --color-ciaf-paper: var(--ciaf-paper);
-  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
-  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-display: "Nunito", system-ui, sans-serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
 }
 
 :root {
@@ -81,16 +81,19 @@
   --primary: oklch(0.22 0.13 265);
   --primary-foreground: oklch(0.99 0.003 250);
 
-  /* CIAF brand tokens */
+  /* CIAF brand tokens — colores originales del logo */
   --ciaf-navy: oklch(0.22 0.13 265);
   --ciaf-navy-deep: oklch(0.14 0.10 265);
-  --ciaf-green: oklch(0.78 0.18 130);
-  --ciaf-green-soft: oklch(0.85 0.14 130);
+  --ciaf-blue: oklch(0.58 0.19 250);
+  --ciaf-blue-light: oklch(0.72 0.16 230);
+  --ciaf-green: oklch(0.72 0.20 140);
+  --ciaf-green-deep: oklch(0.52 0.16 150);
+  --ciaf-green-soft: oklch(0.82 0.18 135);
   --ciaf-ink: oklch(0.18 0.08 265);
   --ciaf-paper: oklch(0.985 0.003 250);
   --gradient-navy: linear-gradient(135deg, oklch(0.22 0.13 265) 0%, oklch(0.12 0.08 265) 100%);
   --gradient-overlay: linear-gradient(180deg, oklch(0.16 0.10 265 / 0.85) 0%, oklch(0.16 0.10 265 / 0.45) 100%);
-  --gradient-accent: linear-gradient(90deg, oklch(0.78 0.18 130) 0%, oklch(0.72 0.20 145) 100%);
+  --gradient-accent: linear-gradient(90deg, oklch(0.52 0.16 150) 0%, oklch(0.72 0.20 140) 100%);
   --shadow-card: 0 10px 30px -10px oklch(0.22 0.13 265 / 0.25);
   --shadow-soft: 0 4px 16px -4px oklch(0.22 0.13 265 / 0.15);
   --shadow-elevated: 0 20px 60px -20px oklch(0.14 0.10 265 / 0.40);
