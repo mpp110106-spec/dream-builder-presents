@@ -9,16 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProntoPagoRouteImport } from './routes/pronto-pago'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PasosModalidadRouteImport } from './routes/pasos.$modalidad'
 import { Route as MatriculaSlugRouteImport } from './routes/matricula.$slug'
 
-const ProntoPagoRoute = ProntoPagoRouteImport.update({
-  id: '/pronto-pago',
-  path: '/pronto-pago',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,52 +31,36 @@ const MatriculaSlugRoute = MatriculaSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/pronto-pago': typeof ProntoPagoRoute
   '/matricula/$slug': typeof MatriculaSlugRoute
   '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/pronto-pago': typeof ProntoPagoRoute
   '/matricula/$slug': typeof MatriculaSlugRoute
   '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/pronto-pago': typeof ProntoPagoRoute
   '/matricula/$slug': typeof MatriculaSlugRoute
   '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/pronto-pago' | '/matricula/$slug' | '/pasos/$modalidad'
+  fullPaths: '/' | '/matricula/$slug' | '/pasos/$modalidad'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/pronto-pago' | '/matricula/$slug' | '/pasos/$modalidad'
-  id:
-    | '__root__'
-    | '/'
-    | '/pronto-pago'
-    | '/matricula/$slug'
-    | '/pasos/$modalidad'
+  to: '/' | '/matricula/$slug' | '/pasos/$modalidad'
+  id: '__root__' | '/' | '/matricula/$slug' | '/pasos/$modalidad'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProntoPagoRoute: typeof ProntoPagoRoute
   MatriculaSlugRoute: typeof MatriculaSlugRoute
   PasosModalidadRoute: typeof PasosModalidadRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/pronto-pago': {
-      id: '/pronto-pago'
-      path: '/pronto-pago'
-      fullPath: '/pronto-pago'
-      preLoaderRoute: typeof ProntoPagoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -109,10 +87,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProntoPagoRoute: ProntoPagoRoute,
   MatriculaSlugRoute: MatriculaSlugRoute,
   PasosModalidadRoute: PasosModalidadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
