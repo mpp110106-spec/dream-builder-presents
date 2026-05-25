@@ -210,7 +210,7 @@ function MilestoneDetail() {
           ¿Qué incluye esta opción?
         </h2>
         <ul className="mt-8 grid md:grid-cols-2 gap-4">
-          {detail.benefits.map((b, i) => (
+          {detail.benefits.map((b: string, i: number) => (
             <li
               key={i}
               className="flex items-start gap-3 rounded-2xl bg-white p-5 border border-[color:var(--ciaf-navy)]/10 shadow-[var(--shadow-soft)]"

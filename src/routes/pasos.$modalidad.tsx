@@ -117,7 +117,7 @@ function ModalitySteps() {
 
         <ol className="mt-10 relative">
           <div className="absolute left-6 top-2 bottom-2 w-px bg-[color:var(--ciaf-navy)]/15" />
-          {data.steps.map((s, i) => (
+          {data.steps.map((s: { title: string; detail: string }, i: number) => (
             <li key={i} className="relative pl-20 pb-8 last:pb-0">
               <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-[color:var(--ciaf-navy)] text-white flex items-center justify-center font-black text-lg shadow-[var(--shadow-soft)]">
                 {i + 1}
