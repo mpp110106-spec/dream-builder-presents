@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProntoPagoRouteImport } from './routes/pronto-pago'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PasosModalidadRouteImport } from './routes/pasos.$modalidad'
+import { Route as MatriculaSlugRouteImport } from './routes/matricula.$slug'
 
 const ProntoPagoRoute = ProntoPagoRouteImport.update({
   id: '/pronto-pago',
@@ -22,31 +24,54 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PasosModalidadRoute = PasosModalidadRouteImport.update({
+  id: '/pasos/$modalidad',
+  path: '/pasos/$modalidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatriculaSlugRoute = MatriculaSlugRouteImport.update({
+  id: '/matricula/$slug',
+  path: '/matricula/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/pronto-pago': typeof ProntoPagoRoute
+  '/matricula/$slug': typeof MatriculaSlugRoute
+  '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/pronto-pago': typeof ProntoPagoRoute
+  '/matricula/$slug': typeof MatriculaSlugRoute
+  '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/pronto-pago': typeof ProntoPagoRoute
+  '/matricula/$slug': typeof MatriculaSlugRoute
+  '/pasos/$modalidad': typeof PasosModalidadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/pronto-pago'
+  fullPaths: '/' | '/pronto-pago' | '/matricula/$slug' | '/pasos/$modalidad'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/pronto-pago'
-  id: '__root__' | '/' | '/pronto-pago'
+  to: '/' | '/pronto-pago' | '/matricula/$slug' | '/pasos/$modalidad'
+  id:
+    | '__root__'
+    | '/'
+    | '/pronto-pago'
+    | '/matricula/$slug'
+    | '/pasos/$modalidad'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ProntoPagoRoute: typeof ProntoPagoRoute
+  MatriculaSlugRoute: typeof MatriculaSlugRoute
+  PasosModalidadRoute: typeof PasosModalidadRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,13 +90,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pasos/$modalidad': {
+      id: '/pasos/$modalidad'
+      path: '/pasos/$modalidad'
+      fullPath: '/pasos/$modalidad'
+      preLoaderRoute: typeof PasosModalidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matricula/$slug': {
+      id: '/matricula/$slug'
+      path: '/matricula/$slug'
+      fullPath: '/matricula/$slug'
+      preLoaderRoute: typeof MatriculaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProntoPagoRoute: ProntoPagoRoute,
+  MatriculaSlugRoute: MatriculaSlugRoute,
+  PasosModalidadRoute: PasosModalidadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
