@@ -13,7 +13,7 @@ export function Slide4Financing() {
         <div
           className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)]"
           style={{
-            backgroundImage: `var(--gradient-overlay), url(${bg})`,
+            backgroundImage: `var(--gradient-overlay), url(${'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

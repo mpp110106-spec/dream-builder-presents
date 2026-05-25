@@ -3,7 +3,7 @@ import bg from "@/assets/hero-graduation.jpg";
 
 export function Slide1Cover() {
   return (
-    <SlideShell variant="image" bg={bg}>
+    <SlideShell variant="image" bg={'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'}>
       <div className="h-full flex flex-col justify-end max-w-[78%]">
         <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-[color:var(--ciaf-green)] mb-[2%]">
           Renovación de matrícula · Semestre 2026-2
