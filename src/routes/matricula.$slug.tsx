@@ -236,7 +236,9 @@ function MilestoneDetail() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a
-              href="https://pagos.ciaf.edu.co"
+              href="https://ciaf.edu.co/pago-online"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[color:var(--ciaf-green)] text-[color:var(--ciaf-navy-deep)] font-extrabold text-lg shadow-lg hover:scale-[1.02] transition-transform"
             >
               <CreditCard className="w-5 h-5" />
