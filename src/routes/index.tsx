@@ -39,10 +39,25 @@ const slides = [
 ];
 
 function Deck() {
-  const [i, setI] = useState(0);
+  const [i, setI] = useState(() => {
+    if (typeof window === "undefined") return 0;
+    const h = window.location.hash.replace("#", "");
+    const idx = slides.findIndex((s) => s.key === h);
+    return idx >= 0 ? idx : 0;
+  });
   const total = slides.length;
   const next = () => setI((p) => Math.min(p + 1, total - 1));
   const prev = () => setI((p) => Math.max(p - 1, 0));
+
+  useEffect(() => {
+    const onHash = () => {
+      const h = window.location.hash.replace("#", "");
+      const idx = slides.findIndex((s) => s.key === h);
+      if (idx >= 0) setI(idx);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
