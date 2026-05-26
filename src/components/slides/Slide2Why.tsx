@@ -29,7 +29,7 @@ export function Slide2Why() {
     <SlideShell variant="light">
       <div className="h-full flex flex-col">
         <div className="mb-[2%]">
-          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-[color:var(--ciaf-green)]">
+          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-white">
             Renueva a tiempo
           </span>
           <h2 className="font-extrabold text-[4vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">

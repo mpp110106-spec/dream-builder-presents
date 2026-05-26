@@ -6,13 +6,13 @@ export function Slide6CTA() {
   return (
     <SlideShell variant="image" bg={'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'}>
       <div className="h-full flex flex-col justify-center max-w-[78%]">
-        <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-[color:var(--ciaf-green)] mb-[1.5%]">
+        <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-white mb-[1.5%]">
           Cierre
         </div>
         <h1 className="font-extrabold leading-[0.95] tracking-tight text-[6vw] mb-[2%]">
           Tu historia
           <br />
-          <span className="text-[color:var(--ciaf-green)]">continúa.</span>
+          <span className="text-white">continúa.</span>
         </h1>
         <p className="text-[1.4vw] font-light leading-snug text-white/85 max-w-[75%] mb-[3%]">
           No pauses el sueño por el que tanto has trabajado. En CIAF seguimos
@@ -38,7 +38,7 @@ export function Slide6CTA() {
 function Pill({ icon: Icon, label }: { icon: typeof Phone; label: string }) {
   return (
     <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-[1.1vw] py-[0.55vw] rounded-full text-white text-[0.9vw] font-medium">
-      <Icon style={{ width: "1vw", height: "1vw" }} className="text-[color:var(--ciaf-green)]" />
+      <Icon style={{ width: "1vw", height: "1vw" }} className="text-white" />
       {label}
     </div>
   );
@@ -65,7 +65,7 @@ function Contact({
     >
       <div
         className={`w-[2.4vw] h-[2.4vw] rounded-lg flex items-center justify-center shrink-0 ${
-          cta ? "bg-[color:var(--ciaf-navy-deep)] text-[color:var(--ciaf-green)]" : "bg-white/15"
+          cta ? "bg-[color:var(--ciaf-navy-deep)] text-white" : "bg-white/15"
         }`}
       >
         <Icon style={{ width: "1.2vw", height: "1.2vw" }} />

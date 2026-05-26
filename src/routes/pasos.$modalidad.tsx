@@ -60,7 +60,7 @@ export const Route = createFileRoute("/pasos/$modalidad")({
     <div className="min-h-screen flex items-center justify-center bg-[color:var(--ciaf-paper)]">
       <div className="text-center">
         <h1 className="text-3xl font-black text-[color:var(--ciaf-navy)]">Modalidad no encontrada</h1>
-        <Link to="/" className="mt-4 inline-block text-[color:var(--ciaf-green-deep)] font-bold underline">
+        <Link to="/" className="mt-4 inline-block text-white font-bold underline">
           Volver a la presentación
         </Link>
       </div>
@@ -87,7 +87,7 @@ function ModalitySteps() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-[color:var(--ciaf-green)] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Volver a la presentación
@@ -100,7 +100,7 @@ function ModalitySteps() {
               <Icon className="w-10 h-10 text-[color:var(--ciaf-navy-deep)]" />
             </div>
             <div>
-              <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-[color:var(--ciaf-green)]">
+              <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-white">
                 Financiación 2026-2
               </div>
               <h1 className="mt-2 font-black text-5xl md:text-6xl leading-[0.95] tracking-tight">
@@ -124,7 +124,7 @@ function ModalitySteps() {
               </div>
               <div className="rounded-2xl bg-white border border-[color:var(--ciaf-navy)]/10 p-6 shadow-[var(--shadow-soft)]">
                 <h3 className="font-black text-xl text-[color:var(--ciaf-navy)] tracking-tight flex items-center gap-2">
-                  <Check className="w-5 h-5 text-[color:var(--ciaf-green-deep)]" />
+                  <Check className="w-5 h-5 text-white" />
                   {s.title}
                 </h3>
                 <p className="mt-2 text-[color:var(--ciaf-ink)]/75 font-medium">{s.detail}</p>
@@ -153,7 +153,7 @@ function ModalitySteps() {
         <Link
           to="/pasos/$modalidad"
           params={{ modalidad: other }}
-          className="mt-8 inline-flex items-center gap-2 text-[color:var(--ciaf-navy)] font-bold hover:text-[color:var(--ciaf-green-deep)] transition-colors"
+          className="mt-8 inline-flex items-center gap-2 text-[color:var(--ciaf-navy)] font-bold hover:text-white transition-colors"
         >
           Prefiero la experiencia {other === "digital" ? "Digital" : "Presencial"}
           <ArrowRight className="w-4 h-4" />

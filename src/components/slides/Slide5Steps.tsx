@@ -23,7 +23,7 @@ export function Slide5Steps() {
     <SlideShell variant="light">
       <div className="h-full flex flex-col">
         <div className="mb-[1.5%]">
-          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-[color:var(--ciaf-green)]">
+          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-white">
             Proceso paso a paso
           </span>
           <h2 className="font-extrabold text-[3.2vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
