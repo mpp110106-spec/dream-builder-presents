@@ -63,7 +63,7 @@ function Deck() {
     <main className="min-h-screen bg-[color:var(--ciaf-paper)] flex flex-col">
       <header className="px-6 md:px-10 py-5 flex items-center justify-between border-b border-[color:var(--ciaf-navy)]/10">
         <div className="flex items-center gap-3">
-          <img src='https://res.cloudinary.com/dt3w3anjm/image/upload/v1779744893/uv8au39ruj6mqacmnylw.png' alt="CIAF" className="h-9 w-auto" />
+          <img src={logoFull} alt="CIAF" className="h-9 w-auto" />
           <div className="h-5 w-px bg-[color:var(--ciaf-navy)]/30" />
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--ciaf-navy)]/70">
             Renovación 2026-2
