@@ -71,7 +71,7 @@ function Deck() {
         </div>
         <button
           onClick={toggleFull}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--ciaf-navy)] hover:text-[color:var(--ciaf-green)] transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--ciaf-navy)] hover:text-white transition-colors"
         >
           <Maximize2 className="w-4 h-4" />
           Presentar

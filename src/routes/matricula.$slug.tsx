@@ -117,7 +117,7 @@ export const Route = createFileRoute("/matricula/$slug")({
     <div className="min-h-screen flex items-center justify-center bg-[color:var(--ciaf-paper)]">
       <div className="text-center">
         <h1 className="text-3xl font-black text-[color:var(--ciaf-navy)]">Fecha no encontrada</h1>
-        <Link to="/" className="mt-4 inline-block text-[color:var(--ciaf-green-deep)] font-bold underline">
+        <Link to="/" className="mt-4 inline-block text-white font-bold underline">
           Volver a la presentación
         </Link>
       </div>
@@ -142,7 +142,7 @@ function MilestoneDetail() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-[color:var(--ciaf-green)] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Volver a la presentación
@@ -195,7 +195,7 @@ function MilestoneDetail() {
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="text-white/60 text-sm font-bold uppercase tracking-[0.15em]">Fecha límite</div>
                 <div className="mt-2 flex items-baseline gap-3">
-                  <Calendar className="w-7 h-7 text-[color:var(--ciaf-green)]" />
+                  <Calendar className="w-7 h-7 text-white" />
                   <div className="font-black text-4xl">{detail.short}</div>
                 </div>
                 <div className="mt-2 text-white/70 text-sm">{detail.date}</div>

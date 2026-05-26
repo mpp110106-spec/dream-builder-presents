@@ -37,7 +37,7 @@ export function Slide4Financing() {
         </div>
 
         <div className="flex flex-col">
-          <span className="text-[0.85vw] font-bold tracking-[0.25em] uppercase text-[color:var(--ciaf-green-deep)]">
+          <span className="text-[0.85vw] font-bold tracking-[0.25em] uppercase text-white">
             Financiación 2026-2
           </span>
           <h2 className="font-black text-[3.4vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
@@ -102,12 +102,12 @@ function FinanceCard({
       <ul className="flex flex-col gap-1 pl-[1vw] border-l border-[color:var(--ciaf-navy)]/10">
         {items.map((i) => (
           <li key={i} className="flex items-center gap-2 text-[0.85vw] text-[color:var(--ciaf-navy)] font-bold">
-            <Check style={{ width: "0.9vw", height: "0.9vw" }} className="text-[color:var(--ciaf-green-deep)]" />
+            <Check style={{ width: "0.9vw", height: "0.9vw" }} className="text-white" />
             {i}
           </li>
         ))}
       </ul>
-      <ArrowRight className="text-[color:var(--ciaf-navy)] group-hover:translate-x-1 group-hover:text-[color:var(--ciaf-green-deep)] transition-all" style={{ width: "1.4vw", height: "1.4vw" }} />
+      <ArrowRight className="text-[color:var(--ciaf-navy)] group-hover:translate-x-1 group-hover:text-white transition-all" style={{ width: "1.4vw", height: "1.4vw" }} />
     </Link>
   );
 }

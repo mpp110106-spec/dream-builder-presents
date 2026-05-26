@@ -5,13 +5,13 @@ export function Slide1Cover() {
   return (
     <SlideShell variant="image" bg={'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'}>
       <div className="h-full flex flex-col justify-end max-w-[78%]">
-        <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-[color:var(--ciaf-green)] mb-[2%]">
+        <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-white mb-[2%]">
           Renovación de matrícula · Semestre 2026-2
         </div>
         <h1 className="font-extrabold leading-[0.95] tracking-tight text-[6.2vw] mb-[2%]">
           Tu sueño no puede
           <br />
-          <span className="text-[color:var(--ciaf-green)]">detenerse.</span>
+          <span className="text-white">detenerse.</span>
         </h1>
         <span className="accent-bar mb-[2%]" />
         <p className="text-[1.5vw] font-light leading-snug text-white/85 max-w-[80%] mb-[3%]">

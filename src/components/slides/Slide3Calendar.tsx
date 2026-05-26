@@ -32,7 +32,7 @@ export function Slide3Calendar() {
       <div className="h-full flex flex-col">
         <div className="flex items-end justify-between mb-[1.6%]">
           <div>
-            <span className="text-[0.85vw] font-bold tracking-[0.25em] uppercase text-[color:var(--ciaf-green-deep)]">
+            <span className="text-[0.85vw] font-bold tracking-[0.25em] uppercase text-white">
               Fechas clave
             </span>
             <h2 className="font-black text-[3.6vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
@@ -64,7 +64,7 @@ export function Slide3Calendar() {
                   }`}
                 >
                   {m.highlight && (
-                    <div className="flex items-center gap-1 text-[0.7vw] font-extrabold uppercase tracking-[0.18em] text-[color:var(--ciaf-green-deep)] mb-1">
+                    <div className="flex items-center gap-1 text-[0.7vw] font-extrabold uppercase tracking-[0.18em] text-white mb-1">
                       <Sparkles style={{ width: "0.9vw", height: "0.9vw" }} />
                       Mejor opción
                     </div>
@@ -75,7 +75,7 @@ export function Slide3Calendar() {
                   <div className="text-[color:var(--ciaf-ink)]/70 text-[0.8vw] mt-1 font-semibold">
                     {m.jornada}
                   </div>
-                  <div className="mt-2 inline-flex items-center gap-1 text-[0.78vw] font-bold text-[color:var(--ciaf-navy)] group-hover:text-[color:var(--ciaf-green-deep)] transition-colors">
+                  <div className="mt-2 inline-flex items-center gap-1 text-[0.78vw] font-bold text-[color:var(--ciaf-navy)] group-hover:text-white transition-colors">
                     Ver detalle
                     <ArrowRight style={{ width: "0.9vw", height: "0.9vw" }} className="transition-transform group-hover:translate-x-1" />
                   </div>
