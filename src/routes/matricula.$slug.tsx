@@ -142,10 +142,11 @@ function MilestoneDetail() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
+              hash="calendar"
               className="inline-flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Volver a la presentación
+              Volver a la línea del tiempo
             </Link>
             <img src={logo} alt="CIAF" className="h-9 w-auto brightness-0 invert" />
           </div>
