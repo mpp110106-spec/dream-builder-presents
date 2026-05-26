@@ -47,7 +47,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
         <img
           src={onDark ? logo : logoFull}
           alt="CIAF"
-          className={onDark ? "h-[2.6vw] w-auto brightness-0 invert" : "h-[2.8vw] w-auto"}
+          className={onDark ? "h-[5vw] w-auto brightness-0 invert" : "h-[5.5vw] w-auto"}
         />
         <div
           className={`h-6 w-px ${
