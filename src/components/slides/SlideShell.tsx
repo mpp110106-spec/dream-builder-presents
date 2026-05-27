@@ -59,7 +59,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
             onDark ? "text-white/90" : "text-[color:var(--ciaf-navy)]/80"
           }`}
         >
-          Universitarios <span className="text-white">Sin Límites</span>
+          Universitarios <span className={onDark ? "text-white" : "text-[color:var(--ciaf-navy)]"}>Sin Límites</span>
         </div>
       </div>
       <div />
