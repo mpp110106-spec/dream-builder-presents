@@ -1,5 +1,6 @@
 import { SlideShell } from "./SlideShell";
 import { Laptop, Users } from "lucide-react";
+import bg from "@/assets/slide5.png";
 
 const digital = [
   "Ingresa al simulador de financiación",
@@ -20,17 +21,18 @@ const presencial = [
 
 export function Slide5Steps() {
   return (
-    <SlideShell variant="light">
+    <SlideShell variant="image" bg={bg}>
       <div className="h-full flex flex-col">
         <div className="mb-[1.5%]">
           <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-white">
             Proceso paso a paso
           </span>
-          <h2 className="font-extrabold text-[3.2vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
+          <h2 className="font-extrabold text-[3.2vw] leading-[1] tracking-tight text-white mt-2">
             Financiación: digital o presencial.
           </h2>
           <span className="accent-bar mt-[1.2%]" />
         </div>
+
 
         <div className="grid grid-cols-2 gap-[1.6vw] flex-1 mt-[1vw]">
           <Track icon={Laptop} title="Digital" steps={digital} accent />
