@@ -62,13 +62,8 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
           Universitarios <span className="text-white">Sin Límites</span>
         </div>
       </div>
-      <div
-        className={`text-[0.75vw] font-semibold tracking-[0.2em] uppercase ${
-          onDark ? "text-white/70" : "text-[color:var(--ciaf-navy)]/60"
-        }`}
-      >
-        Matrícula 2026-2
-      </div>
+      <div />
+
     </div>
   );
 }

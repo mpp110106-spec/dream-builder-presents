@@ -1,7 +1,7 @@
 import { SlideShell } from "./SlideShell";
 import { Laptop, Users, Check, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import bg from "@/assets/hero-financiacion.jpg";
+import bg from "@/assets/slide4.png";
 
 const digital = ["100% en línea", "Simulador inmediato", "Pago rápido y seguro"];
 const presencial = ["Asesor dedicado", "Acompañamiento en sede", "Firma asistida"];
@@ -13,7 +13,7 @@ export function Slide4Financing() {
         <div
           className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)]"
           style={{
-            backgroundImage: `var(--gradient-overlay), url(${'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'})`,
+            backgroundImage: `var(--gradient-overlay), url(${bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

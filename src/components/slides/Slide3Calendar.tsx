@@ -36,7 +36,7 @@ export function Slide3Calendar() {
               Fechas clave
             </span>
             <h2 className="font-black text-[3.6vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
-              Tu ruta de matrícula
+              Sigue avanzando sin límites
             </h2>
             <span className="accent-bar mt-[1.2%]" />
           </div>
