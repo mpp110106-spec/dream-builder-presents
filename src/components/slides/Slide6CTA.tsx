@@ -1,5 +1,5 @@
 import { SlideShell } from "./SlideShell";
-import bg from "@/assets/slide6.png";
+import bg from "@/assets/slide7.png";
 import { Phone, Mail, CreditCard, Percent, Wallet, Zap } from "lucide-react";
 
 export function Slide6CTA() {
