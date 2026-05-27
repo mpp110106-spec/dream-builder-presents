@@ -1,14 +1,11 @@
 import { SlideShell } from "./SlideShell";
-import bg from "@/assets/hero-continua.jpg";
+import bg from "@/assets/slide6.png";
 import { Phone, Mail, CreditCard, Percent, Wallet, Zap } from "lucide-react";
 
 export function Slide6CTA() {
   return (
-    <SlideShell variant="image" bg={'https://res.cloudinary.com/dt3w3anjm/image/upload/v1779745371/ma1p9e5a7nvkfnn9v8fk.png'}>
+    <SlideShell variant="image" bg={bg}>
       <div className="h-full flex flex-col justify-center max-w-[78%]">
-        <div className="text-[0.9vw] font-semibold tracking-[0.25em] uppercase text-white mb-[1.5%]">
-          Cierre
-        </div>
         <h1 className="font-extrabold leading-[0.95] tracking-tight text-[6vw] mb-[2%]">
           Tu historia
           <br />
