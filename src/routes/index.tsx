@@ -6,6 +6,7 @@ import { Slide2Why } from "@/components/slides/Slide2Why";
 import { Slide3Calendar } from "@/components/slides/Slide3Calendar";
 import { Slide4Financing } from "@/components/slides/Slide4Financing";
 import { Slide5Steps } from "@/components/slides/Slide5Steps";
+import { Slide6Academic } from "@/components/slides/Slide6Academic";
 import { Slide6CTA } from "@/components/slides/Slide6CTA";
 import logoFull from "@/assets/ciaf-logo-full.png";
 
@@ -35,6 +36,7 @@ const slides = [
   { key: "calendar", label: "Calendario", node: <Slide3Calendar /> },
   { key: "financing", label: "Financiación", node: <Slide4Financing /> },
   { key: "steps", label: "Paso a paso", node: <Slide5Steps /> },
+  { key: "academic", label: "Matrícula académica", node: <Slide6Academic /> },
   { key: "cta", label: "Cierre", node: <Slide6CTA /> },
 ];
 
