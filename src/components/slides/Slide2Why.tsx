@@ -29,28 +29,28 @@ export function Slide2Why() {
     <SlideShell variant="light">
       <div className="h-full flex flex-col">
         <div className="mb-[2%]">
-          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-white">
+          <span className="text-[0.85cqw] font-semibold tracking-[0.25em] uppercase text-white">
             Renueva a tiempo
           </span>
-          <h2 className="font-extrabold text-[4vw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
+          <h2 className="font-extrabold text-[4cqw] leading-[1] tracking-tight text-[color:var(--ciaf-navy)] mt-2">
             ¿Por qué renovar
             <br /> a tiempo?
           </h2>
           <span className="accent-bar mt-[1.4%]" />
         </div>
-        <div className="grid grid-cols-4 gap-[1.2vw] mt-auto">
+        <div className="grid grid-cols-4 gap-[1.2cqw] mt-auto">
           {items.map(({ icon: Icon, title, body }) => (
             <div
               key={title}
-              className="rounded-2xl bg-white border border-[color:var(--ciaf-navy)]/8 p-[1.5vw] shadow-[var(--shadow-soft)] flex flex-col gap-[0.8vw] hover:-translate-y-1 transition-transform"
+              className="rounded-2xl bg-white border border-[color:var(--ciaf-navy)]/8 p-[1.5cqw] shadow-[var(--shadow-soft)] flex flex-col gap-[0.8cqw] hover:-translate-y-1 transition-transform"
             >
-              <div className="w-[3vw] h-[3vw] rounded-xl bg-[color:var(--ciaf-green)]/15 flex items-center justify-center">
-                <Icon className="text-[color:var(--ciaf-navy)]" style={{ width: "1.6vw", height: "1.6vw" }} />
+              <div className="w-[3cqw] h-[3cqw] rounded-xl bg-[color:var(--ciaf-green)]/15 flex items-center justify-center">
+                <Icon className="text-[color:var(--ciaf-navy)]" style={{ width: "1.6cqw", height: "1.6cqw" }} />
               </div>
-              <div className="text-[1.4vw] font-bold text-[color:var(--ciaf-navy)] leading-tight">
+              <div className="text-[1.4cqw] font-bold text-[color:var(--ciaf-navy)] leading-tight">
                 {title}
               </div>
-              <p className="text-[0.95vw] leading-relaxed text-[color:var(--ciaf-ink)]/75">
+              <p className="text-[0.95cqw] leading-relaxed text-[color:var(--ciaf-ink)]/75">
                 {body}
               </p>
             </div>

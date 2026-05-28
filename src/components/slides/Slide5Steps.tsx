@@ -24,17 +24,17 @@ export function Slide5Steps() {
     <SlideShell variant="image" bg={bg}>
       <div className="h-full flex flex-col">
         <div className="mb-[1.5%]">
-          <span className="text-[0.85vw] font-semibold tracking-[0.25em] uppercase text-white">
+          <span className="text-[0.85cqw] font-semibold tracking-[0.25em] uppercase text-white">
             Proceso paso a paso
           </span>
-          <h2 className="font-extrabold text-[3.2vw] leading-[1] tracking-tight text-white mt-2">
+          <h2 className="font-extrabold text-[3.2cqw] leading-[1] tracking-tight text-white mt-2">
             Financiación: digital o presencial.
           </h2>
           <span className="accent-bar mt-[1.2%]" />
         </div>
 
 
-        <div className="grid grid-cols-2 gap-[1.6vw] flex-1 mt-[1vw]">
+        <div className="grid grid-cols-2 gap-[1.6cqw] flex-1 mt-[1cqw]">
           <Track icon={Laptop} title="Digital" steps={digital} accent />
           <Track icon={Users} title="Presencial" steps={presencial} />
         </div>
@@ -56,28 +56,28 @@ function Track({
 }) {
   return (
     <div
-      className={`rounded-2xl p-[1.4vw] flex flex-col shadow-[var(--shadow-soft)] ${
+      className={`rounded-2xl p-[1.4cqw] flex flex-col shadow-[var(--shadow-soft)] ${
         accent
           ? "bg-[color:var(--ciaf-navy)] text-white"
           : "bg-white border border-[color:var(--ciaf-navy)]/10 text-[color:var(--ciaf-navy)]"
       }`}
     >
-      <div className="flex items-center gap-3 mb-[1vw]">
+      <div className="flex items-center gap-3 mb-[1cqw]">
         <div
-          className={`w-[2.6vw] h-[2.6vw] rounded-xl flex items-center justify-center ${
+          className={`w-[2.6cqw] h-[2.6cqw] rounded-xl flex items-center justify-center ${
             accent ? "bg-[color:var(--ciaf-green)]" : "bg-[color:var(--ciaf-navy)]"
           }`}
         >
-          <Icon className={accent ? "text-[color:var(--ciaf-navy-deep)]" : "text-white"} style={{ width: "1.4vw", height: "1.4vw" }} />
+          <Icon className={accent ? "text-[color:var(--ciaf-navy-deep)]" : "text-white"} style={{ width: "1.4cqw", height: "1.4cqw" }} />
         </div>
-        <div className="text-[1.6vw] font-extrabold tracking-tight">{title}</div>
+        <div className="text-[1.6cqw] font-extrabold tracking-tight">{title}</div>
       </div>
 
-      <ol className="relative flex-1 flex flex-col gap-[0.7vw]">
+      <ol className="relative flex-1 flex flex-col gap-[0.7cqw]">
         {steps.map((s, i) => (
-          <li key={i} className="flex items-start gap-[0.9vw]">
+          <li key={i} className="flex items-start gap-[0.9cqw]">
             <div
-              className={`shrink-0 w-[1.9vw] h-[1.9vw] rounded-full flex items-center justify-center text-[0.85vw] font-bold ${
+              className={`shrink-0 w-[1.9cqw] h-[1.9cqw] rounded-full flex items-center justify-center text-[0.85cqw] font-bold ${
                 accent
                   ? "bg-[color:var(--ciaf-green)] text-[color:var(--ciaf-navy-deep)]"
                   : "bg-[color:var(--ciaf-navy)] text-white"
@@ -86,7 +86,7 @@ function Track({
               {i + 1}
             </div>
             <div
-              className={`pt-[0.3vw] text-[1vw] leading-snug ${
+              className={`pt-[0.3cqw] text-[1cqw] leading-snug ${
                 accent ? "text-white/90" : "text-[color:var(--ciaf-ink)]/85"
               }`}
             >

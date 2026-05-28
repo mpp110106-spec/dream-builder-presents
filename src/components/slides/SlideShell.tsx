@@ -55,7 +55,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
         <img
           src={onDark ? logo : logoFull}
           alt="CIAF"
-          className={onDark ? "h-16 sm:h-20 md:h-[8vw] w-auto brightness-0 invert" : "h-16 sm:h-20 md:h-[9vw] w-auto"}
+          className={onDark ? "h-16 sm:h-20 md:h-[8cqw] w-auto brightness-0 invert" : "h-16 sm:h-20 md:h-[9cqw] w-auto"}
         />
         <div
           className={`h-6 w-px ${
@@ -63,7 +63,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
           }`}
         />
         <div
-          className={`text-[0.7rem] sm:text-xs md:text-[0.85vw] font-bold uppercase tracking-[0.18em] ${
+          className={`text-[0.7rem] sm:text-xs md:text-[0.85cqw] font-bold uppercase tracking-[0.18em] ${
             onDark ? "text-white/90" : "text-[color:var(--ciaf-navy)]/80"
           }`}
         >
