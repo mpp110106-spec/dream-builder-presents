@@ -6,10 +6,12 @@ export function SlideShell({
   children,
   variant = "light",
   bg,
+  flexible = false,
 }: {
   children: ReactNode;
   variant?: "light" | "dark" | "image";
   bg?: string;
+  flexible?: boolean;
 }) {
   const base =
     variant === "dark"
@@ -20,7 +22,7 @@ export function SlideShell({
 
   return (
     <div
-      className={`slide-stage slide-fade ${base}`}
+      className={`slide-stage slide-fade ${base} ${flexible ? "slide-stage--flex" : ""}`}
       style={
         variant === "dark"
           ? { background: "var(--gradient-navy)" }
@@ -34,7 +36,13 @@ export function SlideShell({
       }
     >
       <BrandHeader variant={variant} />
-      <div className="absolute inset-0 px-[5%] pt-[9%] pb-[6%]">{children}</div>
+      {flexible ? (
+        <div className="relative px-5 sm:px-8 md:px-[5%] pt-24 sm:pt-28 md:pt-[9%] pb-6 md:pb-[6%]">
+          {children}
+        </div>
+      ) : (
+        <div className="absolute inset-0 px-[5%] pt-[9%] pb-[6%]">{children}</div>
+      )}
     </div>
   );
 }
@@ -47,7 +55,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
         <img
           src={onDark ? logo : logoFull}
           alt="CIAF"
-          className={onDark ? "h-[8vw] w-auto brightness-0 invert" : "h-[9vw] w-auto"}
+          className={onDark ? "h-16 sm:h-20 md:h-[8vw] w-auto brightness-0 invert" : "h-16 sm:h-20 md:h-[9vw] w-auto"}
         />
         <div
           className={`h-6 w-px ${
@@ -55,7 +63,7 @@ function BrandHeader({ variant }: { variant: "light" | "dark" | "image" }) {
           }`}
         />
         <div
-          className={`text-[0.85vw] font-bold uppercase tracking-[0.18em] ${
+          className={`text-[0.7rem] sm:text-xs md:text-[0.85vw] font-bold uppercase tracking-[0.18em] ${
             onDark ? "text-white/90" : "text-[color:var(--ciaf-navy)]/80"
           }`}
         >
