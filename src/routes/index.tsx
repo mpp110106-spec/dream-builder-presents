@@ -8,6 +8,7 @@ import { Slide4Financing } from "@/components/slides/Slide4Financing";
 import { Slide5Steps } from "@/components/slides/Slide5Steps";
 import { Slide6Academic } from "@/components/slides/Slide6Academic";
 import { Slide6CTA } from "@/components/slides/Slide6CTA";
+import { ScaledSlide } from "@/components/slides/ScaledSlide";
 import logoFull from "@/assets/ciaf-logo-full.png";
 
 export const Route = createFileRoute("/")({
@@ -97,7 +98,7 @@ function Deck() {
 
       <section className="flex-1 max-w-[1400px] w-full mx-auto px-4 md:px-8 py-6 md:py-8 flex flex-col gap-5">
         <div key={i} className="w-full">
-          {slides[i].node}
+          <ScaledSlide>{slides[i].node}</ScaledSlide>
         </div>
 
         <div className="flex items-center justify-between gap-4">
